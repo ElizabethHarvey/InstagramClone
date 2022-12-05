@@ -28,7 +28,7 @@ export default function AppNavigator() {
           } else if (route.name === 'Profile') {
             iconName = focused ? 'person-circle' : 'person-circle-outline';
           }
-          return <Ionicons name={iconName} size={size} color={color} />;
+          return <Ionicons name={iconName} size={30} color={color} />;
         },
         tabBarStyle: { backgroundColor: 'white' },
         tabBarActiveTintColor: 'black',
