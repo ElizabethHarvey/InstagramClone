@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import StoriesList from '../components/StoriesList';
+import FypList from '../components/FypList';
 
 function HomeScreen() {
   return (
@@ -35,6 +36,7 @@ function HomeScreen() {
         </View>
       </View>
       <StoriesList />
+      <FypList />
     </SafeAreaView>
   );
 }
