@@ -2,10 +2,12 @@ import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, Image } from 'react-native';
 
 import Ionicons from '@expo/vector-icons/Ionicons';
+import LinearGradient from 'react-native-linear-gradient';
 
 const StoriesRow = ({ image, name, lock }) => {
   return (
     <View>
+
       <TouchableOpacity style={styles.row}>
         <View style={styles.profile}>
           <Image style={styles.image} source={{ uri: image }} />
@@ -41,10 +43,10 @@ const styles = StyleSheet.create({
     width: 70,
     height: 70,
     borderRadius: '100%',
-    borderColor: '#AD4EC9',
-    borderWidth: 2,
+    borderWidth: 3,
     alignItems: 'center',
     justifyContent: 'center',
+    borderColor: '#C13584',
   },
   lock: {
     backgroundColor: '#E7E6E6',
