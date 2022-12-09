@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, FlatList } from 'react-native';
 import FypRow from './FypRow';
+import StoriesList from './StoriesList';
 import StoriesRow from './StoriesRow';
 
 const FypList = (props) => {
@@ -65,7 +66,7 @@ const FypList = (props) => {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <FypRow image={item.image} name={item.name} lock={item.lock} />
-        )}
+          )}
       />
     </View>
   );
