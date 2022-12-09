@@ -6,8 +6,9 @@ const StoriesList = (props) => {
   const DUMMY_DATA = [
     {
       id: 1,
-      name: 'Team',
+      name: 'Your Story',
       image: 'https://picsum.photos/200/300',
+      user: 'add-circle',
     },
     {
       id: 2,
@@ -61,10 +62,11 @@ const StoriesList = (props) => {
       <FlatList
         showsHorizontalScrollIndicator={false}
         horizontal={true}
+        vertical={true}
         data={DUMMY_DATA}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <StoriesRow image={item.image} name={item.name} lock={item.lock} />
+          <StoriesRow image={item.image} name={item.name} user={item.user} />
         )}
       />
     </View>
