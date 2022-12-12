@@ -5,7 +5,7 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import LinearGradient from 'react-native-linear-gradient';
 import StoriesList from './StoriesList';
 
-const FypRow = ({ image, name, lock }) => {
+const FypRow = ({ image, name, user }) => {
   return (
     <View>
       <TouchableOpacity style={styles.row}>
@@ -15,9 +15,16 @@ const FypRow = ({ image, name, lock }) => {
           </View>
           <Text style={styles.name}>{name}</Text>
         </View>
-        {/* <Ionicons style={styles.lock} name={lock} size='16' color='#AD4EC9' /> */}
         <TouchableOpacity style={styles.post}>
-          <Image style={{width: '95%', height: 500, resizeMode: 'container', }} source={{ uri: image }} />
+          <Image
+            style={{ width: '95%', height: 500, resizeMode: 'container' }}
+            source={{ uri: image }}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Ionicons style={styles.heart} name='heart-outline' size='16' color='#AD4EC9' />
+          <Ionicons style={styles.comments} name='chatbubbles-outline' size='16' color='#AD4EC9' />
+          <Ionicons style={styles.share} name='paper-plane-outline' size='16' color='#AD4EC9' />
         </TouchableOpacity>
       </TouchableOpacity>
     </View>
@@ -26,7 +33,7 @@ const FypRow = ({ image, name, lock }) => {
 
 const styles = StyleSheet.create({
   row: {
-    top: '5%',
+    top: '2%',
     marginBottom: '25%',
   },
   image: {
@@ -37,7 +44,7 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 15,
     bottom: '2%',
-    left: '70%',
+    left: '50%',
   },
   profile: {
     left: '3%',
@@ -56,7 +63,7 @@ const styles = StyleSheet.create({
   },
   post: {
     alignItems: 'center',
-  }
+  },
 });
 
 export default FypRow;

@@ -10,6 +10,7 @@ const FypList = (props) => {
       id: 1,
       name: 'Team',
       image: 'https://picsum.photos/200/300',
+      user: 'heart'
     },
     {
       id: 2,
@@ -65,7 +66,7 @@ const FypList = (props) => {
         data={DUMMY_DATA}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <FypRow image={item.image} name={item.name} lock={item.lock} />
+          <FypRow image={item.image} name={item.name} lock={item.user} />
           )}
       />
     </View>
